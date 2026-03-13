@@ -1,0 +1,45 @@
+# Environment variables (API keys, secrets)
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.venv/
+venv/
+env/
+*.db
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Logs
+*.log
+
+# Generated files
+backend/static/qrcodes/
+backend/qrcodes/
+backend/uploads/
+
+# Windows artifacts
+nul
+Thumbs.db
+
+# Claude
+.claude/
