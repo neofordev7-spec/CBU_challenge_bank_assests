@@ -139,9 +139,6 @@ const bankingTheme = {
     Tag: {
       borderRadiusSM: 6,
     },
-    Badge: {
-      fontWeight: 600 as any,
-    },
     Tabs: {
       inkBarColor: "#0958D9",
       itemActiveColor: "#0958D9",
