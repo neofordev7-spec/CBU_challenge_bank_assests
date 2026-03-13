@@ -22,10 +22,18 @@ export const useAuth = () => useContext(AuthContext);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(() => {
-    const saved = localStorage.getItem("user");
-    return saved ? JSON.parse(saved) : null;
+    try {
+      const saved = localStorage.getItem("user");
+      return saved && saved !== "undefined" ? JSON.parse(saved) : null;
+    } catch {
+      localStorage.removeItem("user");
+      return null;
+    }
   });
-  const [token, setToken] = useState<string | null>(() => localStorage.getItem("token"));
+  const [token, setToken] = useState<string | null>(() => {
+    const t = localStorage.getItem("token");
+    return t && t !== "undefined" ? t : null;
+  });
 
   const handleLogin = (token: string, user: User) => {
     localStorage.setItem("token", token);
