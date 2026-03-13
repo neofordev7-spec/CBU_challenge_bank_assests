@@ -10,6 +10,13 @@ from app.api import auth, branches, departments, employees, categories, assets, 
 
 Base.metadata.create_all(bind=engine)
 
+# Startup'da demo ma'lumotlarni yaratish (agar database bo'sh bo'lsa)
+try:
+    from app.seed import seed
+    seed()
+except Exception as e:
+    print(f"Seed xatosi (e'tiborsiz qoldirildi): {e}")
+
 app = FastAPI(
     title=settings.APP_NAME,
     description="Bank ofisi aktivlarini boshqarish tizimi",
