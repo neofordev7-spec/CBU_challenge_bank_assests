@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Button, Input, Typography, Spin, Badge } from "antd";
 import {
   RobotOutlined, SendOutlined, CloseOutlined,
-  MessageOutlined, BulbOutlined,
+  BulbOutlined,
 } from "@ant-design/icons";
 import { aiChat } from "../../api";
 

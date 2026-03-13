@@ -140,7 +140,7 @@ const bankingTheme = {
       borderRadiusSM: 6,
     },
     Badge: {
-      fontWeight: 600,
+      fontWeight: 600 as any,
     },
     Tabs: {
       inkBarColor: "#0958D9",
